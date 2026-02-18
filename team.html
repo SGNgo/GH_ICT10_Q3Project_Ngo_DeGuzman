@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Intramurals Eligibility Checker</title>
+</head>
+<style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #1e3a8a; /* dark blue */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: inline-block;
+    width: 90%;
+    max-width: 400px;
+}
+
+input, button {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #162d6a;
+}
+
+#output {
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
+
+<body>
+    <h1>Intramurals Eligibility Checker</h1>
+
+    <nav>
+    <a href="index.html">Sign Up</a>
+    <a href="team.html">Team Checker</a>
+    <a href="players.html">Players List</a>
+    </nav>
+
+    <br><br>
+
+    <form>
+        <p><strong>Online Registration</strong></p>
+        <input type="radio" name="reg" value="yes" required> Registered<br>
+        <input type="radio" name="reg" value="no" required> Not Registered<br>
+
+
+        <p><strong>Medical Clearance</strong></p>
+        <input type="radio" name="med" value="cleared" required> Cleared<br>
+        <input type="radio" name="med" value="not" required> Not Cleared<br>
+
+        <p><strong>Grade Level</strong></p>
+        <input type="number" id="grade" placeholder="Enter your grade (7-10)"><br>
+
+        <p><strong>Section</strong></p>
+        <input type="text" id="section" placeholder="Enter your section"><br><br>
+
+        <button type="button" py-click="intrams_qualifications">
+            Check Eligibility
+        </button>
+    </form>
+
+    <div id="output"></div>
+
+    <py-script src="team.py"></py-script>
+</body>
+</html>
