@@ -7,75 +7,78 @@
     <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
     <title>Intramurals Eligibility Checker</title>
 </head>
-<style>
-       body {
-    font-family: Arial, sans-serif;
-    background-color: #1e3a8a; /* dark blue */
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-}
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: darkblue;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-h1 {
-    color: white;
-    margin-bottom: 20px;
-}
+        h1, p {
+            color: whitesmoke;
+            margin-bottom: 10px;
+        }
 
-nav {
-    margin-bottom: 20px;
-}
+        nav {
+            margin: 20px 0;
+        }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
+        nav a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 600;
+            margin: 0 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
 
-nav a:hover {
-    background-color: rgba(255,255,255,0.2);
-}
+        nav a:hover {
+            background-color: lightskyblue;
+        }
 
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: inline-block;
-    width: 90%;
-    max-width: 400px;
-}
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+        }
 
-input, button {
-    width: 90%;
-    padding: 8px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid white;
+            font-size: 14px;
+        }
 
-button {
-    background-color: #1e3a8a;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
+        input[type="button"] {
+            background-color: green;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #162d6a;
-}
+        input[type="button"]:hover {
+            background-color: green;
+        }
 
-#output {
-    margin-top: 15px;
-    font-weight: bold;
-}
-</style>
-
+        #output {
+            margin-top: 25px;
+            font-weight: bold;
+            color: black;
+            font-size: 25px;
+        }
+    </style>
 <body>
-    <h1>Intramurals Eligibility Checker</h1>
+    <h1> 👀 Intramurals Eligibility Checker </h1>
+    <p> A.Y 2025-2026 </p>
 
     <nav>
     <a href="index.html">Sign Up</a>
@@ -86,14 +89,20 @@ button:hover {
     <br><br>
 
     <form>
-        <p><strong>Online Registration</strong></p>
-        <input type="radio" name="reg" value="yes" required> Registered<br>
-        <input type="radio" name="reg" value="no" required> Not Registered<br>
-
-
-        <p><strong>Medical Clearance</strong></p>
-        <input type="radio" name="med" value="cleared" required> Cleared<br>
-        <input type="radio" name="med" value="not" required> Not Cleared<br>
+    
+    <div>
+        <strong>Online Registration</strong>
+            <div class="radio-group">
+            <label><input type="radio" name="reg" value="yes" required> Registered</label>
+            <label><input type="radio" name="reg" value="no" required> Not Registered</label>
+    </div>
+    <br><br>
+    <div>
+        <strong>Medical Clearance</strong>
+            <div class="radio-group">
+            <label><input type="radio" name="med" value="cleared" required> Cleared</label>
+            <label><input type="radio" name="med" value="not" required> Not Cleared</label>
+    </div>
 
         <p><strong>Grade Level</strong></p>
         <input type="number" id="grade" placeholder="Enter your grade (7-10)"><br>
@@ -101,9 +110,9 @@ button:hover {
         <p><strong>Section</strong></p>
         <input type="text" id="section" placeholder="Enter your section"><br><br>
 
-        <button type="button" py-click="intrams_qualifications">
-            Check Eligibility
-        </button>
+       <input type="button" py-click="intrams_qualifications" value="CHECK ELIGIBILITY"></button>
+    <br><br>
+       <img src="Screenshot 2026-02-21 124956.png" style="width: 100%;">
     </form>
 
     <div id="output"></div>

@@ -1,17 +1,15 @@
-from pyscript import display
+from pyscript import display, document
 
-players = [
-    "Seth Ngo",
-    "Eduardo Hizon",
-    "Anakin Cruz",
-    "Mic Ramos",
-    "Vito Garcia",
-    "Neriza Santos",
-    "Juan Dela Cruz",
-    "Maria Reyes",
-    "Carlo Mendoza",
-    "Alyssa Torres"
-]
+def player_display(e):
+    document.getElementById('players').innerHTML = ""
 
-for player in players:
-    display(f"<li>{player}</li>", target="player_list")
+    players = [
+        "Seth Ngo", "Vito De Guzman", "Ishan Shrestha",
+        "Tax Rivera", "Tar Canete", "Enzo Villegas",
+        "Koby Baylon", "LeBron James", "Bronny James",
+        "Aura Briguela", "Bini Mikha", "Daniel Padilla",
+        "Kath Bernardo", "Malupiton", "Jacob Cortez", "Pres. BBM"
+    ]
+
+    for player in players:
+        display(f"• {player}", target="players")
