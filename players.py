@@ -3,6 +3,7 @@ from pyscript import display, document
 def player_display(e):
     document.getElementById('players').innerHTML = ""
 
+    # PLAYER LIST
     players = [
         "ASEO, TESSA",
         "BATAC, ANAKIN",
@@ -31,5 +32,6 @@ def player_display(e):
         "YAO, FRANCESCA"
     ]
 
+    # Loop through the list and display each player with numbering
     for i in range(len(players)):
         display(f"{i+1}. {players[i]}", target="players")
