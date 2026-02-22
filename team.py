@@ -38,3 +38,5 @@ def intrams_qualifications(e):
         display(f"🎉 Grade {grade} {section} is part of the {teams[grade][section]}!", target="output")
     else:
         display("Invalid section.", target="output")
+
+        
