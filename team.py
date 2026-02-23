@@ -49,3 +49,4 @@ def intrams_qualifications(e):  # Function triggered when CHECK ELIGIBILITY butt
         display("Invalid section.", target="output")
         
 
+
