@@ -39,7 +39,7 @@ def intrams_qualifications(e):  # Function triggered when CHECK ELIGIBILITY butt
         7: {"Ruby":"Yellow Tigers","Sapphire":"Blue Bears","Emerald":"Red Bulldogs","Topaz":"Green Hornets"},
         8: {"Ruby":"Blue Bears","Sapphire":"Red Bulldogs","Emerald":"Green Hornets","Topaz":"Yellow Tigers"},
         9: {"Ruby":"Red Bulldogs","Sapphire":"Green Hornets","Emerald":"Yellow Tigers","Topaz":"Blue Bears"},
-        10: {"Ruby":"Blue Tigers","Sapphire":"Green Hornets","Emerald":"Yellow Tigers","Topaz":"Red Bulldogs"}
+        10: {"Ruby":"Blue Bears","Sapphire":"Green Hornets","Emerald":"Yellow Tigers","Topaz":"Red Bulldogs"}
     }
 
     # SECTION AND GRADE TEAM DETERMINATION
@@ -48,3 +48,4 @@ def intrams_qualifications(e):  # Function triggered when CHECK ELIGIBILITY butt
     else:
         display("Invalid section.", target="output")
         
+
